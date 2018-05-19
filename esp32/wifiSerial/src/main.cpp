@@ -5,11 +5,10 @@
 
 #define ONE_WIRE_BUS 13
 #define BUILTIN_LED 2
-//const int ledPin = 2;
 
 // WiFi credentials.
-char * WIFI_SSID = "TP-LINK_EE791A";
-const char * WIFI_PASS = "Margarida";
+char const * WIFI_SSID = "******";
+char const * WIFI_PASS = "****"; // valid and safe in either C or C++.
 
 // Setup a oneWire instance to communicate with any OneWire devices (not just Maxim/Dallas temperature ICs)
 OneWire oneWire(ONE_WIRE_BUS);
@@ -58,9 +57,7 @@ void wifi_connect(void) {
 	Serial.println("Hello World, I'm connected to the internets!!");
 }
 
-
-void setup()
-{
+void setup(){
 	pinMode(BUILTIN_LED, OUTPUT);     // Initialize the BUILTIN_LED pin as an output
 	Serial.begin(115200);
 	// Giving it a little time because the serial monitor doesn't
@@ -81,9 +78,7 @@ void setup()
 	//Serial.println("Hello World, I'm connected to the internets!!");
 }
 
-void loop()
-{
-	//    delay(2000);
+void loop(){
 	Serial.println("Hello World");
 	digitalWrite (BUILTIN_LED, HIGH);	// turn on the LED
 	delay(500);	// wait for half a second or 500 milliseconds
